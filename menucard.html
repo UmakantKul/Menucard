@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Delight</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+
+        body {
+            background: #f0f7ff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/400');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23f0f7ff'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        .header h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        .header p {
+            font-size: 22px;
+            color: #ffc107;
+        }
+
+        .menu-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .menu-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: #1a237e;
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #ffc107;
+            margin: 10px auto;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-name {
+            font-size: 20px;
+            color: #1a237e;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item-price {
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        .item-description {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #1a237e;
+            color: white;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-section h3 {
+            color: #ffc107;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>South Indian Delight</h1>
+        <p>Authentic South Indian Cuisine</p>
+    </header>
+
+    <div class="menu-container">
+        <section class="menu-section">
+            <h2 class="section-title">Breakfast Specials</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-name">
+                        Masala Dosa
+                        <span class="item-price">₹120</span>
+                    </div>
+                    <p class="item-description">Crispy rice crepe filled with spiced potato masala, served with sambar and chutneys</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">
+                        Idli Sambar
+                        <span class="item-price">₹80</span>
+                    </div>
+                    <p class="item-description">Steamed rice cakes served with traditional lentil soup and coconut chutney</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title">Main Course</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-name">
+                        Hyderabadi Biryani
+                        <span class="item-price">₹300</span>
+                    </div>
+                    <p class="item-description">Fragrant basmati rice cooked with aromatic spices and tender meat</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">
+                        Chettinad Curry
+                        <span class="item-price">₹280</span>
+                    </div>
+                    <p class="item-description">Spicy traditional curry cooked with handground masalas</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>456 Marina Beach Road</p>
+                <p>Chennai, Tamil Nadu</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>7:00 AM - 10:30 PM</p>
+                <p>Open All Days</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📞 +91 98765 43211</p>
+                <p>✉️ info@southindiandelight.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
